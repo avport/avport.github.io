@@ -1,0 +1,13 @@
+Get project from Github
+git clone <copy>
+
+
+Save to Github
+git add .
+git commit -m "message here"
+git push
+
+
+**You will need this later**
+Get changes from Github
+git pull
