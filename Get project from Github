@@ -3,6 +3,8 @@ git clone <copy>
 
 
 Save to Github
+cd space tab tab enter - to folder 
+enter 
 git add .
 git commit -m "message here"
 git push
@@ -11,3 +13,4 @@ git push
 **You will need this later**
 Get changes from Github
 git pull
+gi

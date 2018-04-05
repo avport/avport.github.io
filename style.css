@@ -8,31 +8,83 @@ body {
 
 
 
-img {
+.photo-grid-container img {
 	width: 80%;
 	height: 80%;
 	border-radius: 50% 20% / 10% 40%;
-	box-shadow: 5px 10px;
+	/*box-shadow: 5px 10px;*/
 	padding: 10px; 
 	margin: 10px; 
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 -5px 0 gray)
+  drop-shadow(0 5px 0 gray)
+  drop-shadow(-5px 0 0 gray)
+  drop-shadow(5px 0 0 gray);
+
+}
+
+.header {
+/*  position: fixed;
+  top: 0;
+   
+  text-align: center;
+  width: 50%;
+  height: 200px;
+  left: 33%;
+  right: 20%;
+  */
+
+  /* fixed position a zero-height full width container */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  /* center all inline content */
+  text-align: center;
+}
+
+
+.header h1 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 60px;
+  top: -50px;
+  z-index: 2;
+  /* make the block inline */
+  display: inline-block;
+  /* reset container's center alignment */
+  text-align: left;
+  color: grey;
+}
+
+.header .banner {
+  position: fixed;
+  top: -15px;
+  left: 10px;
+  right: 10px;
+  width: 100%; 
+  height: 150px; 
+  z-index: 1;
+  box-shadow: 5px 10px; 
+
 }
 
 .menu .currentLink {
 	text-decoration: underline !important;
 	background-color: black !important; 
-	}
+}
 
 .menu a:link, .menu a:visited { 
-    background-color: grey;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 50% 20% / 10% 40%;
+  background-color: grey;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50% 20% / 10% 40%;
 }
 
 
@@ -41,7 +93,7 @@ img {
 }
 
 .menu a:hover, a:active {
-    background-color: black;
+  background-color: black;
 }
 .menu a:li {
 	display: none;
@@ -49,68 +101,42 @@ img {
 
 .menu a: #inlinelink {
 
-    text-decoration: none;
+  text-decoration: none;
 }
 .menu a: #inlinelink:hover {
-    background-color: black;
-    text-decoration: none;
-}
-
-.header h1 {
-	font-family: 'Playfair Display SC', serif;
-    font-size: 100px;
-  	position: fixed;
-    top: 0;
-    z-index: 2; 
-    text-align: center;
-    width: 500px;
-    height: 200px;
-    left: 33%;
-    right: 20%;
-    top: -50px;
-    color: grey;
-}
-
-
-.banner {
-	position: fixed;
-	top: -18px;
-	left: 10px;
-	right: 10px;
-    width: 1300px; 
-    height: 150px; 
-    z-index: 1;
+  background-color: black;
+  text-decoration: none;
 }
 
 #submit {
 	background-color: grey;
 	color: white;
 	padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 50% 20% / 10% 40%;
-    font-size: 20px;
-    font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 50% 20% / 10% 40%;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #submit:hover, #submit:active {
-    background-color: black;
+  background-color: black;
 }
 
 .contactcontainer {
 	text-align: center;
-    border-style: solid;
-    border-width: 3px;
-    border-color: grey;
-    border-radius: 10px;
-    padding:20px;
-   width: 200px;
-   margin: auto;
-    
+  border-style: solid;
+  border-width: 3px;
+  border-color: grey;
+  border-radius: 10px;
+  padding:20px;
+  width: 200px;
+  margin: auto;
+
 }
 
-/*@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
@@ -121,36 +147,40 @@ img {
 	p, h1, h2, h3, body {
 		font-size: 1.25rem; 
 		orientation: portrait;
-	} */
-/*}*/
-
-.aboutpics, .indexpics {
-	display: flex; 
-	flex-wrap: wrap;
+	} 
 }
+
+
 
 
 .photo-grid-container {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   margin: 10px;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+
 }
 
 .photo-grid {
-  width: 900px;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 10px;
+
+
 }
 
 .photo-grid-item {
   width: 500px;
   margin: 10px;
   flex-direction: row;
+
+
 }
-
-
 
 
 
