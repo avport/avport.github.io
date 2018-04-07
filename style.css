@@ -8,68 +8,31 @@ body {
 
 
 
-.photo-grid-container img {
-	width: 80%;
-	height: 80%;
-	border-radius: 50% 20% / 10% 40%;
-	/*box-shadow: 5px 10px;*/
-	padding: 10px; 
-	margin: 10px; 
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 -5px 0 gray)
-  drop-shadow(0 5px 0 gray)
-  drop-shadow(-5px 0 0 gray)
-  drop-shadow(5px 0 0 gray);
-
-}
-
-.header {
-/*  position: fixed;
-  top: 0;
-   
-  text-align: center;
-  width: 50%;
-  height: 200px;
-  left: 33%;
-  right: 20%;
-  */
-
-  /* fixed position a zero-height full width container */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 0;
-  /* center all inline content */
-  text-align: center;
-}
-
-
 .header h1 {
   font-family: 'Playfair Display SC', serif;
-  font-size: 60px;
-  top: -50px;
+  font-size: 100px;
+  position: fixed;
   z-index: 2;
-  /* make the block inline */
-  display: inline-block;
-  /* reset container's center alignment */
-  text-align: left;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  /*left: auto;
+  right: auto;*/
+  top: -70px;
   color: grey;
+  
 }
+
 
 .header .banner {
   position: fixed;
   top: -15px;
-  left: 10px;
-  right: 10px;
-  width: 100%; 
+  left: 1%;
+  width: 97%; 
   height: 150px; 
   z-index: 1;
   box-shadow: 5px 10px; 
-
+  border-radius: 50% 20% / 10% 40%;
 }
 
 .menu .currentLink {
@@ -124,6 +87,10 @@ body {
   background-color: black;
 }
 
+.content {
+  overflow: hidden;
+}
+
 .contactcontainer {
 	text-align: center;
   border-style: solid;
@@ -143,14 +110,26 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-	p, h1, h2, h3, body {
+@media screen and (max-width: 768px) {
+	 p, .menu h2, h3, ol, ul, li, body, .contactcontainer {
 		font-size: 1.25rem; 
-		orientation: portrait;
+		width: 100%;
+
 	} 
 }
 
+@media screen and (max-width: 768px) {
+    .photo-grid-container, .photo-grid {
+         width: 300px;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .header h1 {
+         font-size: 50px;
+         margin-top: 100px;
+    }
+}
 
 
 .photo-grid-container {
@@ -174,6 +153,23 @@ body {
 
 }
 
+.photo-grid-container img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50% 20% / 10% 40%;
+  /*box-shadow: 5px 10px;*/
+  padding: 10px; 
+  margin: 10px; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 -5px 0 gray)
+  drop-shadow(0 5px 0 gray)
+  drop-shadow(-5px 0 0 gray)
+  drop-shadow(5px 0 0 gray);
+
+}
 .photo-grid-item {
   width: 500px;
   margin: 10px;
@@ -182,10 +178,16 @@ body {
 
 }
 
+label, input {
+  margin: 5px;
+}
 
 
-
-
+@media screen and (max-width: 768px) {
+  .contactcontainer {
+       font-size: 1.25rem; 
+    }
+}
 
 
 

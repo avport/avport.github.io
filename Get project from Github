@@ -1,5 +1,12 @@
 Get project from Github
-git clone <copy>
+find the foler in finder
+go to folder in terminal
+pwd to show current directory 
+ls enter to see all folders
+cd space <directory I am moving to> enter
+ls enter to see next directory 
+git clone <to go github and copy the address from 'clone or download'>
+
 
 
 Save to Github
