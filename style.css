@@ -1,6 +1,5 @@
 body {
-	background-color: white;
-	margin-top: 230px;
+	margin-top: 200px;
 	text-align: center;
 	font-family: 'Quicksand', sans-serif;
 	color: grey;
@@ -15,9 +14,6 @@ body {
   z-index: 2;
   text-align: center;
   width: 100%;
-  height: 200px;
-  /*left: auto;
-  right: auto;*/
   top: -70px;
   color: grey;
   
@@ -58,14 +54,16 @@ body {
 .menu a:hover, a:active {
   background-color: black;
 }
+
 .menu a:li {
 	display: none;
 }
 
 .menu a: #inlinelink {
-
   text-decoration: none;
 }
+
+
 .menu a: #inlinelink:hover {
   background-color: black;
   text-decoration: none;
@@ -103,34 +101,29 @@ body {
 
 }
 
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) 
+}*/
+
+@media screen and (max-width: 768px) {
+  p, .menu h2, h3, ol, ul, li, body {
+    font-size: 1.25rem; 
+    width: 100%;
+  } 
+  .photo-grid-container, .photo-grid {
+    width: 300px;
+  }
+  .header h1 {
+    font-size: 50px;
+    margin-top: 100px;
+  }
+  .contactcontainer {
+    font-size: 1.25rem; 
+  }
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
 }
-
-@media screen and (max-width: 768px) {
-	 p, .menu h2, h3, ol, ul, li, body, .contactcontainer {
-		font-size: 1.25rem; 
-		width: 100%;
-
-	} 
-}
-
-@media screen and (max-width: 768px) {
-    .photo-grid-container, .photo-grid {
-         width: 300px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .header h1 {
-         font-size: 50px;
-         margin-top: 100px;
-    }
-}
-
 
 .photo-grid-container {
   display: flex;
@@ -140,24 +133,19 @@ body {
   height: auto;
   min-width: 100%;
   min-height: 100%;
-
 }
 
 .photo-grid {
-
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 10px;
-
-
 }
 
 .photo-grid-container img {
   width: 80%;
   height: 80%;
   border-radius: 50% 20% / 10% 40%;
-  /*box-shadow: 5px 10px;*/
   padding: 10px; 
   margin: 10px; 
   display: block;
@@ -174,19 +162,10 @@ body {
   width: 500px;
   margin: 10px;
   flex-direction: row;
-
-
 }
 
 label, input {
   margin: 5px;
-}
-
-
-@media screen and (max-width: 768px) {
-  .contactcontainer {
-       font-size: 1.25rem; 
-    }
 }
 
 
